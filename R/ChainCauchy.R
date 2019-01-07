@@ -17,7 +17,7 @@
 #' n<-10000
 #' cauchy<-cauchy.chain(n,sigma=1,x0=0,location=0,scale=1)
 #' cauchy$k/n
-#' hist(cauchy$x[1001:n],freq=FALSE,main="cauchy密度图",breaks=60)
+#' hist(cauchy$x[1001:n],freq=FALSE,main="cauchy",breaks=60)
 #' curve(dcauchy(x,0,1),add=TRUE)
 #' }
 #' @export

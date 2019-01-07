@@ -35,7 +35,7 @@ The Cauchy distribution with location \code{l} and scale \code{s} has density
 n<-10000
 cauchy<-cauchy.chain(n,sigma=1,x0=0,location=0,scale=1)
 cauchy$k/n
-hist(cauchy$x[1001:n],freq=FALSE,main="cauchy瀵嗗害鍥戼㹥",breaks=60)
+hist(cauchy$x[1001:n],freq=FALSE,main="cauchy",breaks=60)
 curve(dcauchy(x,0,1),add=TRUE)
 }
 }
