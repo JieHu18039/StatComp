@@ -401,7 +401,7 @@ We can use sample to estimate $1/\lambda$.
 y<-c(3,5,7,18,43,85,91,98,100,130,230,487)
 boot.mean <- function(y,i) mean(y[i]) 
 de <- boot(data=y,statistic=boot.mean, R =1000) 
-ci <- boot.ci(de,type=c("norm","basic","perc","bca")) # Ĭ??95% ????????
+ci <- boot.ci(de,type=c("norm","basic","perc","bca")) 
 ci$norm[2:3]
 ci$basic[4:5]
 ci$percent[4:5]
@@ -655,13 +655,9 @@ pow
  f1<-function(x,u,lamada){
     pi<-3.14159265
     return(lamada/(pi*(lamada^2+(x-u)^2)))
-} #柯西分布的密度函数
+} 
 
 cauchy.chain<-function(n,sigma,x0,u,lamada){
-    #n链的长度
-    #sigma提议分布的标准差
-    #x0初值
-    #u,lamada柯西分布的参数
     x<-NULL
     x[1]<-x0
     e=runif(n)
@@ -685,7 +681,7 @@ cauchy.chain<-function(n,sigma,x0,u,lamada){
   qqplot(rcauchy(n-1000,0,1),cauchy$x[1001:n])
   qqline(cauchy$x[1001:n])
   #hist
-  hist(cauchy$x[1001:n],freq=F,main="cauchy密度图",breaks=60)
+  hist(cauchy$x[1001:n],freq=F,main="cauchy",breaks=60)
   curve(f1(x,0,1),add=TRUE)
 ```
 
@@ -1048,7 +1044,7 @@ lapply.f(x,quantile)
 
    * Exercises 4
   
-   Make a faster version of chisq.test() that only computes the chi-squareteststatisticwhentheinputistwonumericvectors with no missing values. You can try simplifying chisq.test() or by coding from the mathematical de???nition (http://en. wikipedia.org/wiki/Pearson%27s_chi-squared_test).
+   Make a faster version of chisq.test() that only computes the chi-squareteststatisticwhentheinputistwonumericvectors with no missing values. You can try simplifying chisq.test() or by coding from the mathematical definition (http://en. wikipedia.org/wiki/Pearson%27s_chi-squared_test).
    
 # Answer
  
