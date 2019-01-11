@@ -1,2 +1,0 @@
-# StatComp
-Homework for statcomp
